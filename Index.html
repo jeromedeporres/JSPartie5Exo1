@@ -18,16 +18,14 @@
     </form>
     <script> 
         function passverif() {
-            var pass = document.getElementById('pass').value;
-            var vpass = document.getElementById('vpass').value;
-            if( pass == vpass ) { 
-                document.getElementById('passs').style.borderColor = "green"; event.preventDefault(); 
-                document.getElementById('vpass').style.borderColor = "green"; event.preventDefault(); 
-
-            }else { 
-                document.getElementById('passs').style.borderColor = "red"; event.preventDefault(); 
-                document.getElementById('vpass').style.borderColor = "red"; event.preventDefault(); 
-            } 
+            var password = document.getElementById('pass'), confirm = document.getElementById('vpass');
+                if (password.value == confirm.value) {
+                    password.style.borderColor = 'green';
+                    confirm.style.borderColor = 'green';
+                }else {
+                    password.style.borderColor = 'red';
+                    confirm.style.borderColor = 'red';
+                }
         } 
     </script>    
 </body>
