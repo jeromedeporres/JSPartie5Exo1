@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Partie5Exo01</title>
+</head>
+<body>
+    <form method="POST" onSubmit="return validate()">
+        <p>
+            <label for="pass">Mot de passe :</label>
+            <input type="password" name="pass" id="pass"  />
+        </p> 
+        <p>
+            <label for="verif_pass" id="passs">Confirmation Mot de passe :</label>
+            <input type = "password" name="vpass" id="vpass" />
+        </p>
+        <p>
+            <input type="submit" onclick='passverif()' />
+        </p>
+    </form>
+    <script> 
+        function passverif() {
+            var pass = document.getElementById('pass').value;
+            var vpass = document.getElementById('vpass').value;
+            if( pass == vpass ) { 
+                document.getElementById('passs').style.borderColor = "green"; event.preventDefault(); 
+                document.getElementById('vpass').style.borderColor = "green"; event.preventDefault(); 
+
+            }else { 
+                document.getElementById('passs').style.borderColor = "red"; event.preventDefault(); 
+                document.getElementById('vpass').style.borderColor = "red"; event.preventDefault(); 
+            } 
+        } 
+    </script>    
+</body>
+</html>
